@@ -34,3 +34,33 @@ exports.getallpost=async (req,res)=>{
         return res.json(err.message);
     }
 }
+
+exports.updatePosts= async (req, res) => {
+    const { postId } = req.params;
+    const { title, content ,tags} = req.body; 
+    try {
+      const updatedPost = await car_model.findByIdAndUpdate(postId, { title, content, tags }, { new: true });
+      return res.status(200).json(updatedPost);
+    } catch (error) {
+      return res.status(500).json({ message: 'Error updating post', error });
+    }
+  };
+
+
+exports.deletePosts= async (req, res) => {
+    const { postId } = req.params;
+    // console.log(postId);
+  try {
+    const deletedPost = await car_model.findByIdAndDelete(postId);
+    
+    if (!deletedPost) {
+      return res.status(404).json({ message: 'Post not found' });
+    }
+
+    res.status(200).json({ message: 'Post deleted successfully', post: deletedPost });
+  } catch (error) {
+    res.status(500).json({ message: 'Error deleting post', error });
+  }
+  };
+
+  

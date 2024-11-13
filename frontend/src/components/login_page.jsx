@@ -20,7 +20,7 @@ function login_page(){
       body: JSON.stringify({email,password,}),
       credentials: 'include'
     })
-    // console.log(response);
+    
     if(response.ok){
       navigate('/home');
     }

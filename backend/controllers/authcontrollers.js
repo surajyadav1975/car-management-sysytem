@@ -39,7 +39,6 @@ exports.registerUser=async (req,res)=>{
 
 exports.loginUser=async (req,res)=>{
     let {email,password}=req.body;
-
     let u=await user.findOne({email});
     if(!u) return res.status(200).json({message:"user dont have any account, try to register"});
 
