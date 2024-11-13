@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.dropdown {
+  position: relative;
+  display: block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.fixed-background {
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; 
+  height: 100vh; 
+  overflow: auto;
+}
+.fixed-back{
+  background-size: cover;
+  background-position: center;
+  /* background-attachment: fixed;  */
+  height: 100vh; 
+  overflow: auto;
+}
+
+.myprofile:hover{
+  background-color: orangered;
+  background-image: linear-gradient(90deg, #FF4500 0% ,#ff7f50 100%);
+}
+
+@media (max-width: 1087px) {
+  .sidebar {
+    display: none;
+  }
+  
+  .image{
+    display: none;
+  }
+  
+}
