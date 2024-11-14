@@ -33,7 +33,8 @@ const Post = ({ post}) => {
 
   return (
     <div className="w-5/12 h-5/12 mx-auto bg-white rounded-lg overflow-hidden mb-5">
-      <div className="px-2 py-2">
+      <div className="px-2 py-2"
+      style={{backgroundColor: 'orangered',backgroundImage: 'linear-gradient(90deg, #FF4500 0% ,#ff7f50 100%)'}}>
         <div className="flex justify-between items-center">
           <div className="flex gap-4 items-center">
             <button className="flex items-center font-bold hover:text-orange-500 text-gray-900">
@@ -95,34 +96,35 @@ const Post = ({ post}) => {
             </button>
           </form>
         ) : (
-          <div className="font-bold ml-2 text-1xl leading-normal tracking-tight text-gray-900 mb-1 mr-2 min-h-20">
+          <div className="text-1xl ml-2 leading-normal tracking-tight text-gray-900 mb-1 mr-2 min-h-20 ">
             {post.content}
           </div>
         )}
       </div>
 
-      <div className="px-4 py-2 border-t border-gray-200 border-t-1 border-black">
+      <div className="border-t border-gray-200 border-t-1 border-black">
         <div className="flex justify-between items-center">
-          <span className="font-bold ml-2 text-1xl leading-normal tracking-tight text-gray-900">
+          <span className="h-full w-full font-bold p-2 text-1xl leading-normal tracking-tight text-gray-900 border-b-2 border-black"
+          style={{backgroundColor: 'orangered',backgroundImage: 'linear-gradient(90deg, #FF4500 0% ,#ff7f50 100%)'}}>
             {post.tags}
           </span>
-          <div className="flex gap-3">
+        </div>
+        <div className="flex justify-evenly">
             <div
-              className="flex cursor-pointer"
+              className="flex cursor-pointer justify-center p-2 w-full h-full border-r-2 border-black"
               onClick={() => setIsEditing(true)}
             >
               <PencilSquareIcon className="w-6 h-6 mr-1" />
               <span className="font-bold ml-2 text-1xl leading-normal tracking-tight text-gray-900">Edit</span>
             </div>
             <div
-              className="flex cursor-pointer"
+              className="flex cursor-pointer justify-center p-2 w-full h-full "
               onClick={handledelete}
             >
               <TrashIcon className="w-6 h-6 mr-1" />
               <span className="font-bold ml-2 text-1xl leading-normal tracking-tight text-gray-900">Delete</span>
             </div>
           </div>
-        </div>
       </div>
     </div>
   );

@@ -19,10 +19,15 @@ function register_page(){
       },
       body: JSON.stringify({username,email,password,})
     })
-    response=await response.text();
-    // console.log(response);
-
+    
+    if(response.ok){
+      alert("now try login");
+    }
+    else if(response.status === 404){
+      alert("user already exist");
+    }
     navigate('/');
+    
   }
 
   return (

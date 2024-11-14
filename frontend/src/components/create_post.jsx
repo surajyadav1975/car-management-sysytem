@@ -51,7 +51,7 @@ const createpost = () => {
 
         <div className="mb-2">
           <label className="block text-1xl font-bold text-gray-700 mb-2">Tags</label>
-          <input type='text' placeholder='Enter Your Tags in a sentence' required name='tags' id='tags' className="block w-full rounded-md border-0 pl-2 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 sm:text-sm sm:leading-6"/>
+          <input type='text' placeholder='Enter Your Tags in a sentence using hashtags (Ex: #LuxuryOffRoad #IconicDesign #PowerAndPrestige)' required name='tags' id='tags' className="block w-full rounded-md border-0 pl-2 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 sm:text-sm sm:leading-6"/>
         </div>
 
         <div className="mb-2">

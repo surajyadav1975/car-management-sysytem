@@ -24,6 +24,10 @@ function login_page(){
     if(response.ok){
       navigate('/home');
     }
+    else if (response.status === 404) {
+      alert('User does not exist. Please register.');
+      navigate('/register'); 
+    }
     else{
       alert('username or password incorrect');
       navigate('/');
