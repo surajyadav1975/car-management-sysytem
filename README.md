@@ -50,6 +50,7 @@ This application allows users to manage their cars by creating, viewing, editing
 - Express.js
 - JavaScript
 - Tailwind
+- Postman
 
 ### Installation
 
